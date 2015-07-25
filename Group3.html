@@ -1,0 +1,205 @@
+
+<!--
+To change this template use Tools | Templates.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Gopher Broke</title>
+    
+    <!--Link the AJAX api CDN from google-->
+    
+    
+    
+   <style>
+        #gameCard td{
+               padding:0; margin:0;
+                }
+
+        #gameCard {
+               border-collapse: collapse;
+               cursor:url(finger2.png), pointer;
+                }
+       body{
+           
+           
+
+   background-image: url("../soil.jpg");
+}
+
+           
+           
+           
+       }
+
+    </style>
+    
+</head>
+<body>
+<center>
+    <div id="container">
+        <div id="header">
+             <h1>GOPHER BROKE</h1>
+             <center>You have 15 seconds to stop as many gophers as possible!</center>
+            
+             
+             <div id="scoreOut">Score:</div>
+                <FORM>
+                    <INPUT TYPE="button" onClick="history.go(0)" VALUE="Refresh">
+                </FORM>
+            </div>
+            
+        <div id="content">
+            
+            <!--make the table 10x10-->
+            
+            <table  id="gameCard">
+                <tbody>
+                    
+                    <tr>
+                        <td id="cell00">&nbsp;</td>
+                        <td id="cell01">&nbsp;</td>
+                        <td id="cell02">&nbsp;</td>
+                        <td id="cell03">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="cell10">&nbsp;</td>
+                        <td id="cell11">&nbsp;</td>
+                        <td id="cell12">&nbsp;</td>
+                        <td id="cell13">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="cell20">&nbsp;</td>
+                        <td id="cell21">&nbsp;</td>
+                        <td id="cell22">&nbsp;</td>
+                        <td id="cell23">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="cell30">&nbsp;</td>
+                        <td id="cell31">&nbsp;</td>
+                        <td id="cell32">&nbsp;</td>
+                        <td id="cell33">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="cell40">&nbsp;</td>
+                        <td id="cell41">&nbsp;</td>
+                        <td id="cell42">&nbsp;</td>
+                        <td id="cell43">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td id="cell50">&nbsp;</td>
+                        <td id="cell51">&nbsp;</td>
+                        <td id="cell52">&nbsp;</td>
+                        <td id="cell53">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <br>
+    
+    
+    
+</center>
+    
+    
+<!--Start Script Here>-->  
+<script>
+            
+            
+           
+ function game(){
+        
+      
+      // Set the max length and Width
+        var maxWidth = 4;
+        var maxLength = 6;
+
+
+// Returns a random number
+function CreateRandom() {
+    
+}
+        
+
+            
+//function to create an image
+function CreateGopher() {
+    
+    var randomNumber = CreateRandom();
+    
+    var image = "test";
+    
+    
+    //Create initialize the image variable
+    
+    if(random number == 1){       
+          image  = "<img src='lettuce.jpg' height= '70' width='70'>;"
+      }
+      else if(random number == 2){
+      }      image= "<img src= 'gopher.jpg' height= '70' width='70'>;"
+     
+      else if(random number == 3){
+      }     image = "<img src='lettuce.jpg' height='70' width='70'>;"
+                 
+      else if(random number == 4){
+            image = "<img src='lettuce.jpg'  height='70' width='70'>;"
+      }
+    
+    //add if/ else if statements to print an image (if random number is 1 print gopher if else 
+    //print lettuce) use this as the data for the variable image
+    // ( image = "<img src='Gopher.JPG' class='gopher' height='50' width='50'>";)
+    
+  
+    return image;
+}
+
+           
+//create table
+function UpdateTable() {
+    // Iterate over each cell and set a random number
+    for (var i = 0; i < maxLength; i++) {
+        for (var j = 0; j < maxWidth; j++) {
+            tmp = 'cell' + i + j;
+            document.getElementById(tmp).innerHTML = CreateGopher();
+        }
+    }
+    
+    
+    
+}
+            
+
+//Use The function update table
+UpdateTable();
+            
+
+            
+ 
+// Put Jquery Stuff for on click in here        
+        
+
+//end of game() function    
+}
+            
+            
+    game();
+    
+    //set interval for method game with 1000 as the timer setting
+    
+    
+    //set Time out to alert the score and window.location.href to a starting screen
+    //time set to 16000
+    
+          
+               
+               
+//end Script Tag     
+</script>
+    
+    
+    
+    
+</body>
+</html>
